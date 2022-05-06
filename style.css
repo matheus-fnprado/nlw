@@ -14,7 +14,7 @@
     --brand-beige: hsl(39, 100%, 97%);
     --brand-light: hsl(148, 23%, 89%);
 
-    --bg-light: hsl(180, 15%, 97%)
+    --bg-light: hsl(180, 15%, 97%);
   
     font-size: 62.5%; /* 1rem = 10px */
 
@@ -63,9 +63,9 @@ section{
     padding-top: calc(4.1rem + var(--nav-height));
 }
 
-#home:before{
+#home::before{
     content: "";
-    width: 100vw;
+    width: 100%;
     height: calc(108rem + var(--nav-height));
     background-color: var(--brand-light);
     display: block;
@@ -74,20 +74,6 @@ section{
     top: 0;
     left: 0;
     z-index: -1;
-}
-  
-#home h4 {
-    font-size: 1.4rem;
-    color: var(--primary-color);
-    margin-bottom: 1.6rem;
-}
-  
-#home h1 {
-    font-size: 3.4rem;
-    color: var(--headline);
-    line-height: 130%;
-  
-    margin-bottom: 2.4rem;
 }
   
 #home p {
@@ -161,6 +147,41 @@ section{
     line-height: 150%;
 }
 
+section header h4{
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0.08rem;
+    color: var(--primary-color);
+
+    text-transform: uppercase;
+
+    margin-bottom: 1.6rem;
+}
+
+section header h2{
+    font-size: 3rem;
+    line-height: 3.9rem;
+
+    color: var(--headline);
+}
+
+section header h1{
+    font-size: 3.4rem;
+    color: var(--headline);
+    line-height: 130%;
+  
+    margin-bottom: 2.4rem;
+}
+
+section .content p{
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 150%;
+
+    color: var(--paragraph)
+}
+
 /* NAVIGATION */
 
 nav{
@@ -186,7 +207,7 @@ nav.scroll{
     width: 100vw;
 }
 
-nav.scroll svg:nth-child(1) path{
+nav.scroll .logo path{
     fill: white
 }
 
@@ -240,10 +261,6 @@ body.menu-expanded .menu{
 
     transition: transform 300ms;
     transform: translateY(0);
-}
-
-body.menu-expanded nav{
-    position: relative;
 }
 
 .menu ul:nth-child(1){
@@ -304,24 +321,7 @@ body.menu-expanded button path{
 
 /* SERVICES */
 
-#services header h4{
-    font-size: 1.4rem;
-    line-height: 150%;
-    letter-spacing: 0.08rem;
-
-    color: var(--primary-color);
-
-    text-transform: uppercase;
-
-    margin-bottom: 1.6rem;
-}
-
 #services header h2{
-    font-size: 3rem;
-    line-height: 3.9rem;
-
-    color: var(--headline);
-
     margin-bottom: 6rem;
 }
 
@@ -343,4 +343,20 @@ body.menu-expanded button path{
 
 #services .card h3{
     margin-block: 1.6rem;
+}
+
+/* ABOUT */
+
+#about{
+    text-align: left;
+    background-color: var(--brand-beige);
+}
+
+#about header h2{
+    margin-bottom: 2.4rem;
+}
+
+#about .content p{
+    margin-top: 2.4rem;
+    margin-bottom: 6rem;
 }
