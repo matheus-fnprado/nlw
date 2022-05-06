@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DoctorCare</title>
-    <link rel="stylesheet" href="/style.css" />
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DoctorCare</title>
+        <link rel="stylesheet" href="/style.css" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-</head>
-<body onscroll="onScroll()" class="">
-    <nav id="navigation" class="">
-        <div class="wrapper">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap"
+        rel="stylesheet"
+        />
+    </head>
+    <body onscroll="onScroll()" class="">
+        <nav id="navigation" class="">
+            <div class="wrapper">
             <a class="logo" href="#">
                 <svg 
                 width="133" height="18" viewBox="0 0 133 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -35,9 +35,9 @@
 
             <div class="menu">
                 <ul>
-                    <li><a href="#">Início</a></li>
-                    <li><a href="#">Serviços</a></li>
-                    <li><a href="#">Sobre</a></li>
+                    <li><a onclick="closeMenu()" href="#home">Início</a></li>
+                    <li><a onclick="closeMenu()" href="#services">Serviços</a></li>
+                    <li><a  href="#about">Sobre</a></li>
                 </ul>
 
                 <a class="button" href="#">Agenda sua consulta</a>
@@ -97,10 +97,10 @@
                     <path d="M30 10L10 30M10 10L30 30" stroke="#FFFAF1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
             </button>
-        </div>
-    </nav>
+            </div>
+         </nav>
 
-<header class="wrapper">
+        <header id="home" class="wrapper">
     <h4>BOAS-VINDAS A DOCTORCARE 👋</h4>
     <h1>Assistência médica simplificada para todos</h1>
     <p>Os médicos da DoctorCare vão além dos sintomas para tratar a causa raiz de sua doença e proporcionar uma cura a longo prazo.</p>
@@ -143,9 +143,51 @@
             <p>Anos no mercado</p> 
         </div>
     </div>
-</header>
-    
-<script src="main.js"></script>
+        </header>
 
-</body>
+        <section id="services">
+            <div class="wrapper">
+                <header>
+                    <h4>Serviços</h4>
+                    <h2>Como podemos ajudá-lo a se sentir melhor?</h2>
+                </header>
+
+                <div class="cards">
+                    <div class="card">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="12" fill="#DCE9E2"/>
+                            <path d="M17.091 8.18182L10.091 15.1818L6.90918 12" stroke="#00856F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        
+                        <h3>Problemas digestivos</h3>
+                        <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim.</p>
+                    </div>
+
+                    <div class="card">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="12" fill="#DCE9E2"/>
+                            <path d="M17.091 8.18182L10.091 15.1818L6.90918 12" stroke="#00856F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        
+                        <h3>Problemas digestivos</h3>
+                        <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim.</p>
+                    </div>
+
+                    <div class="card">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="12" fill="#DCE9E2"/>
+                            <path d="M17.091 8.18182L10.091 15.1818L6.90918 12" stroke="#00856F" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        
+                        <h3>Problemas digestivos</h3>
+                        <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim.</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+    
+        <script src="main.js"></script>
+    </body>
 </html>
