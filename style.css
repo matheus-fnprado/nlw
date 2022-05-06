@@ -172,6 +172,8 @@ nav{
     top: 0;
     left: 50%;
     transform: translateX(-50%);
+
+    z-index: 100;
 }
 
 nav .wrapper{
@@ -239,7 +241,7 @@ body.menu-expanded .menu{
 
     padding-top: var(--nav-height);
 
-    transition: transform 700ms;
+    transition: transform 300ms;
     transform: translateY(0);
 }
 
