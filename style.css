@@ -13,6 +13,7 @@
 
     --brand-beige: hsl(39, 100%, 97%);
     --brand-light: hsl(148, 23%, 89%);
+    --brand-button-hover: hsl(170, 100%, 14%);
 
     --bg-light: hsl(180, 15%, 97%);
   
@@ -57,6 +58,71 @@ section{
     padding-block: 10rem;
 }
 
+section header h4{
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0.08rem;
+    color: var(--primary-color);
+
+    text-transform: uppercase;
+
+    margin-bottom: 1.6rem;
+}
+
+section header h2{
+    font-size: 3rem;
+    line-height: 3.9rem;
+
+    color: var(--headline);
+}
+
+section header h1{
+    font-size: 3.4rem;
+    color: var(--headline);
+    line-height: 130%;
+  
+    margin-bottom: 2.4rem;
+}
+
+section .content p{
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 150%;
+
+    color: var(--paragraph)
+}
+
+.button {
+    background: var(--primary-color);
+  
+    border: none;
+    border-radius: 4rem;
+  
+    margin-bottom: 6rem;
+
+    padding: 1.6rem 3.2rem;
+    width: fit-content;
+  
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.6rem;
+
+    text-decoration: none;
+
+    transition: background 200ms;
+}
+
+.button:hover{
+    background-color: var(--brand-button-hover);
+}
+
 /* Home */
 
 #home {
@@ -75,6 +141,10 @@ section{
     left: 0;
     z-index: -1;
 }
+
+#home .button{
+    margin-inline: auto;
+}
   
 #home p {
     font-size: 1.8rem;
@@ -85,31 +155,6 @@ section{
     margin-bottom: 3.2rem;
 }
   
-#home button {
-    background: var(--primary-color);
-  
-    border: none;
-    border-radius: 4rem;
-  
-    margin-bottom: 6rem;
-  
-    height: 6.2rem;
-    width: 26.3rem;
-  
-    color: white;
-    font-size: 1.4rem;
-    font-weight: 700;
-    text-transform: uppercase;
-  
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1.6rem;
-  
-    margin-right: auto;
-    margin-left: auto;
-}
-
 #home img{
     width: 26.4rem;
     display: block;
@@ -145,41 +190,6 @@ section{
     color: var(--primary-color);
     font-size: 1.6rem;
     line-height: 150%;
-}
-
-section header h4{
-    font-size: 1.4rem;
-    font-weight: 700;
-    line-height: 150%;
-    letter-spacing: 0.08rem;
-    color: var(--primary-color);
-
-    text-transform: uppercase;
-
-    margin-bottom: 1.6rem;
-}
-
-section header h2{
-    font-size: 3rem;
-    line-height: 3.9rem;
-
-    color: var(--headline);
-}
-
-section header h1{
-    font-size: 3.4rem;
-    color: var(--headline);
-    line-height: 130%;
-  
-    margin-bottom: 2.4rem;
-}
-
-section .content p{
-    font-weight: 400;
-    font-size: 1.6rem;
-    line-height: 150%;
-
-    color: var(--paragraph)
 }
 
 /* NAVIGATION */
@@ -359,4 +369,84 @@ body.menu-expanded button path{
 #about .content p{
     margin-top: 2.4rem;
     margin-bottom: 6rem;
+}
+
+/* CONTACT */
+
+#contact {
+    text-align: left;
+}
+
+#contact header{
+    margin-bottom: 3.2rem;
+}
+
+#contact ul{
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+
+    margin-bottom: 3.2rem;
+}
+
+#contact ul li{
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+/* CONTACT */
+
+footer{
+    background: var(--primary-color);
+    padding-block: 6rem;
+
+    text-align: left;
+
+    color: white;
+}
+
+footer .logo{
+    display: inline-block;
+    margin-bottom: 2.4rem;
+}
+
+footer .logo svg{
+    width: 23.6rem;
+    height: 3.1rem;
+}
+
+footer .logo path{
+    fill: white;
+}
+
+footer p{
+    color: var(--brand-beige);
+    line-height: 2;
+
+    margin-bottom: 3.2rem;
+}
+
+footer .social-links{
+    justify-content: flex-start;
+}
+
+/* TOPO */
+
+#topo{
+    position: fixed;
+    bottom: 1rem;
+    right: 2.5rem;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(100%);
+    transition: 200ms;
+}
+
+#topo.show{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }

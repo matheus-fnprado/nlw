@@ -1,10 +1,26 @@
+window.addEventListener("scroll", onScroll)
+
+onScroll()
+
 function onScroll(){
-   if(scrollY > 0){
+    showNavOnScroll()
+    showBackHome()
+}
+
+function showNavOnScroll(){
+    if(scrollY > 0){
         navigation.classList.add("scroll")
     }else{
         navigation.classList.remove("scroll")
     }
+}
 
+function showBackHome(){
+    if(scrollY > 500){
+        topo.classList.add("show")
+    }else{
+        topo.classList.remove("show")
+    }
 }
 
 function openMenu(){
@@ -13,7 +29,7 @@ function openMenu(){
 
 function closeMenu(){
     document.body.classList.remove("menu-expanded")
-}
+}-
 
 ScrollReveal({
     origin: "top",
