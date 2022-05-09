@@ -431,6 +431,13 @@ footer .social-links{
     justify-content: flex-start;
 }
 
+#contact img{
+    width: 26.4rem;
+    display: block;
+    margin-inline: auto;
+    object-position: 0 2rem;
+}
+
 /* TOPO */
 
 #topo{
